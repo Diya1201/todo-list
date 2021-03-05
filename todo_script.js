@@ -6,7 +6,7 @@
       }*/
     //}
   //})()*/
-  const todoUL = document.getElementById("todo");
+  const todoUL = document.getElementById("todo-ul");
   loadEvents();
   // load every event in the page
   function loadEvents(){
@@ -26,7 +26,7 @@ function submit(e){ // Checks whether the add task firld is empty or not
 function addTask(task) { // Adds a task into task list 
     let ul = document.querySelector(".main-ul");
     let li = document.createElement('li');
-    li.innerHTML = `<div class="inner-div"><li id="note-li" class="note-li"><button class="done" >&#10004;</button><p class="tasks" id="list-tasks" onclick="">${task}</p><button class="delete">x</button><button class="edit">&#128393;</button><br/><br/></li></div><br/>`;
+    li.innerHTML = `<div class="inner-div"><li id="note-li" class="note-li"><button class="done" >&#10004;</button><p class="tasks" id="list-tasks" onclick="">${task}</p><button class="delete">&#10006;</button><button class="edit">&#128393;</button><br/><br/></li></div><br/>`;
     ul.appendChild(li);
     document.querySelector('.task-list').style.display = 'block';
     console.log("Task added successfully");
@@ -102,8 +102,10 @@ function edit(e) {
 function filterList(e) {
   console.log(todoUL);
   const todo = todoUL.childNodes;
+  const filter = todo[3].childNodes;
   console.log(todo);
-  todo.forEach(function(todoEl){
+  console.log(filter);
+  filter.forEach(function(todoEl){
     if(todoEl.nodeName === "P") {
       switch(e.target.value){
         case "all":
