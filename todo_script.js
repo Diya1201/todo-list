@@ -6,7 +6,7 @@
       }*/
     //}
   //})()*/
-  const todoUL = document.getElementById("note-li");
+  const todoUL = document.getElementById("todo");
   loadEvents();
   // load every event in the page
   function loadEvents(){
@@ -26,7 +26,7 @@ function submit(e){ // Checks whether the add task firld is empty or not
 function addTask(task) { // Adds a task into task list 
     let ul = document.querySelector(".main-ul");
     let li = document.createElement('li');
-    li.innerHTML = `<div class="inner-div"><li id="note-li" class="note-li"><button class="done" >✔</button><p class="tasks" id="list-tasks" onclick="">${task}</p><button class="delete">×</button><button class="edit">🖊</button><br/><br/></li></div><br/>`;
+    li.innerHTML = `<div class="inner-div"><li id="note-li" class="note-li"><button class="done" >&#10004;</button><p class="tasks" id="list-tasks" onclick="">${task}</p><button class="delete">x</button><button class="edit">&#128393;</button><br/><br/></li></div><br/>`;
     ul.appendChild(li);
     document.querySelector('.task-list').style.display = 'block';
     console.log("Task added successfully");
