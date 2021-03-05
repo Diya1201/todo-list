@@ -6,7 +6,7 @@
       }*/
     //}
   //})()*/
-  const todoUL = document.getElementById("todo");
+  const todoUL = document.getElementById("note-li");
   loadEvents();
   // load every event in the page
   function loadEvents(){
@@ -102,10 +102,8 @@ function edit(e) {
 function filterList(e) {
   console.log(todoUL);
   const todo = todoUL.childNodes;
-  const filter = todo[1].childNodes;
   console.log(todo);
-  console.log(filter);
-  filter.forEach(function(todoEl){
+  todo.forEach(function(todoEl){
     if(todoEl.nodeName === "P") {
       switch(e.target.value){
         case "all":
