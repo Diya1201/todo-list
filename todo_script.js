@@ -103,10 +103,12 @@ function filterList(e) {
   console.log(todoUL);
   const todo = todoUL.childNodes;
   const filter = todo[3].childNodes;
+  const filter_list = filter[0].childNodes;
   console.log(todo);
   console.log(filter);
+  console.log(filter_list);
   filter.forEach(function(todoEl){
-    if(todoEl.nodeName === "P") {
+    if(todoEl.nodeName === "LI") {
       switch(e.target.value){
         case "all":
           todoEl.style.display = "flex";
