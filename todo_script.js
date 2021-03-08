@@ -26,7 +26,7 @@ function submit(e){ // Checks whether the add task firld is empty or not
 function addTask(task) { // Adds a task into task list 
     let ul = document.querySelector(".main-ul");
     let li = document.createElement('li');
-    li.innerHTML = `<div class="inner-div"><li id="note-li" class="note-li"><button class="done" >&#10004;</button><p class="tasks" id="list-tasks" onclick="">${task}</p><button class="delete">&#10006;</button><button class="edit">&#128393;</button><br/><br/></li></div><br/>`;
+    li.innerHTML = `<div class="inner-div"><button class="done" >&#10004;</button><p class="tasks" id="list-tasks" onclick="">${task}</p><button class="delete">&#10006;</button><button class="edit">&#128393;</button><br/><br/></div><br/>`;
     ul.appendChild(li);
     document.querySelector('.task-list').style.display = 'block';
     console.log("Task added successfully");
@@ -102,32 +102,44 @@ function edit(e) {
 function filterList(e) {
   console.log(todoUL);
   const todo = todoUL.childNodes;
-  const filter = todo[1].childNodes;
-  const filter_list = filter[0].childNodes;
+  //const filter = todo.childNodes;
+  //const filter_list = filter[0].childNodes;
   console.log(todo);
-  console.log(filter);
-  console.log(filter_list);
-  filter_list.forEach(function(todoEl){
-    if(todoEl.nodeName === "LI") {
-      switch(e.target.value){
-        case "all":
+  //console.log(filter);
+  todo.forEach(function(todoEl){
+    console.log("Entered for each function");
+    if(todoEl.children[0].nodeName === "DIV") {
+          console.log(" enteered if of for each");
+          //const todo1 = todoe[1].childNodes;
+          console.log(todoEl);
+          switch(e.target.value){
+          case "all":
+          console.log(e.target.value);
+          console.log("entered all");
           todoEl.style.display = "flex";
           break;
-        case "completed":
-          if (todoEl.children[1].classList.contains("completed")) {
-            todoEl.style.display = "flex";
-          } else {
-            todoEl.style.display = "none";
-          }
+          case "completed":
+            console.log(e.target.value);
+            console.log(todoEl.children[0].children[1]);
+            if (todoEl.children[0].children[1].classList.contains("completed")) {
+              console.log("entered completed if");
+              todoEl.style.display = "flex";
+            } else {
+              console.log("entered completed else");
+              todoEl.style.display = "none";
+           }
           break;
-        case "pending":
-          if (todoEl.children[1].classList.contains("completed")) {
-            todoEl.style.display = "none";
-          } else {
-            todoEl.style.display = "flex";
-          }
+          case "pending":
+            console.log(e.target.value); 
+            if (todoEl.children[0].children[1].classList.contains("completed")) {
+              console.log("entered pending if");
+              todoEl.style.display = "none";
+            } else {
+              console.log("entered pending else");
+              todoEl.style.display = "flex";
+            }
           break;
-      }
+        }
     }
   });
 }
