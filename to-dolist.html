@@ -5,6 +5,9 @@
         </title>
         <link rel="stylesheet" href="design.css">
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
     </head>
     <body>
          <div>
@@ -12,7 +15,7 @@
                  <div class="div1">
                      <div class="div2">
                         <nav class="nav-bar">
-                            <img id="header-img" scr="//live.staticflickr.com/1545/24808538502_8567bace29_n.jpg" alt="list logo">
+                            <i class="fas fa-clipboard-list fa-bounce" id="header-img"></i>
                             <ul id="links">
                                 <li class="list1"> <a>Home </a></li>
                                 <li class="list1"> <a> List Page </a> </li>
@@ -27,25 +30,40 @@
             <div class="main"> 
             <h1> TO-DO List </h1>
             <form class="" action="index.html" method="post">
-                <input type="text" placeholder="  Add new task" name="task">
+                <input type="text" required placeholder="  Add new task" name="task">
                 <button  type="submit" class="button">
-                     <strong> + </strong>
-                </button> <br/>
-                
-            </form>
-              <div class="task-list"> 
+                       <i class="fas fa-plus-square"></i>  
+                </button> 
+                <div class="select"> <b>
                 <span class="custom-dropdown custom-dropdown_white">
                     <select class="dropdown_select dropdown_white filter-todos">
                       <option value="all"> All Items</option>
                       <option value="completed">Completed Tasks</option>
                       <option value="pending">Pending Tasks</option>
                     </select>
-                </span>
+                </span></b>
+                </div>
+                <br/>
+            </form>
+              <div class="task-list"> 
                 <ul class="main-ul" id="todo-ul"></ul> <br/>
-                <button id="clear"> Clear List </button>
+                <div class="div3">
+                <p id="demo"></p>
+                </div>
+                <button id="clear" > Clear List </button>
               </div>
             </div>  
+           <!-- <link rel="stylesheet" href="sweetalert-master/sweetalert-master/src/sweetalert.css">
+            <script src="sweetalert-master/sweetalert-master/docs/assets/sweetalert/sweetalert.min.js"></script>-->
             <script type="text/javascript" src="todo_script_es6.js"> </script> 
+            <div id="snackbar">Task Deleted</div>
+            <div id = "container">
+                <div class = "message"> Do You want to clear the list </div>
+                <button class = "yes">Yes</button>
+                <button class = "no">Cancel</button>
+             </div>
+             <!--<p id="no-completed"> There are no completed tasks </p>
+             <p id="no-pending"> There are no pending tasks </p>-->
         </center>
     </body>
 </html>

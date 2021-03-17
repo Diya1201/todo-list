@@ -1,9 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
-    background-color: chartreuse;
+    background-color: #fff;
+    /*background-image: linear-gradient(#009dff , #bfe0ff);*/
+    min-height: 100vh;
 }
 .header{
-    background-color: #ff007f;
-    color: #000;
+    background-color: #254e97;
+    color: #fff;
     height: 70px;
     position: fixed;
     width: 100%;
@@ -14,6 +21,10 @@ body{
     width: 150px;
     float: left;
     border-color: #fff;
+    color: cornsilk;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 4px;
 }
 #links{
     list-style-type: none;
@@ -23,7 +34,7 @@ body{
     display:inline-block;
     vertical-align:top;
     overflow: hidden;
-    background-color: #ff007f; 
+    background-color: #254e97; 
     /*float: right;*/
     position: fixed;
      
@@ -35,11 +46,11 @@ body{
       display: inline;
 }
 li a{
-      color: black;
+      color: #fff;
      padding: 14px 16px;
     text-decoration: none;
     font-size: 25px;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: "Rubik", sans-serif;
     display: flex;
    }
 li a:hover{
@@ -54,122 +65,142 @@ li a:hover{
 }
 h1{
     padding-top: 100px;
-     font-family: Lobster;
-     color: #000000;
-     font-size: 50px;
+    font-family: 'Rubik',sans-serif;  
+    color: #000000;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 form{
-    background-color: chartreuse;
-    padding: 15px;
+    /*background-color: chartreuse;*/
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-input[type="text"]{
-    width: 310px;
-    height: 50px;
-    outline: 0;
-    border-color: #ff007f;
-    border-radius: 15px;
-    font-size: 1.5em;
+input[type="text"], form button{
+    /*width: 310px;
+    height: 50px;*/
+    /*border-color: #000;
+    border-radius: 15px;*/
+    border: none;
+    font-size: 1.5rem;
     background: #fff;
-    color: #2f4f4f;
+    padding: 0.5rem;
+    height: 53px;
+    font-family: "Rubik",sans-serif;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 .button{
-    font-size: 1.8em;
-    color: #000000;
+    color: #254e97;
     background-color: #fff;
-    outline: 0;
-    width: 50px;
+    /*width: 50px;
     height: 50px;
     border-radius: 10px;
-    border-color: #ff007f;
+    border-color: #000;*/
+    border: none;
+    transition: all 0.3s ease;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.button:hover {
+    color: #fff;
+    background-color: #254e97;
 }
 .main{
-  width: 600px;
+  width: 800px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: auto;
+  background-color: silver;
 }
 button:hover{
     background-color: slateblue;
 }
 .task-list{
-  background-color: #3895d3;
+  background-color: silver;
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 20px;
   padding-right: 40px;
+  padding-left: 40px;
   width: auto;
   border-radius: 15px;
-  display: none;
-  box-shadow: 0px 5px 5px grey;;
+  justify-content: center;
+  align-items: center;
+  /*box-shadow: 0px 5px 5px grey;;*/
 }
 .tasks{
   background-color: white;
-  border-color: #ff007f;
-  padding-bottom: 14px;
-  padding-top: 10px;
-  font-size: 1.3em;
   color: #2f4f4f;
-  border-style: solid;
-  border-radius: 15px;
-  height: 18px;
-  margin: 0px 8px 0px 8px;
-  width: 250px;
+  /*border-style: solid;
+  /*border-radius: 15px;
+  border-width: 2px;*/
+  /*margin: 0.5rem;*/
   float: left;
-  text-align: center;
-  vertical-align: middle;
+  font-family: 'Rubik',sans-serif;
+}
+.inner-div p{
+    flex: 1;
 }
 .main-ul{
     list-style: none;
     padding-bottom: 20px;
+    min-width: 30%;
 }
 .delete{
     color: white;
     background-color: red;
-    float: left;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    font-size: 2.5em;
-    margin-right: 5px;
+    border: none;
+    font-size: 1rem;
+    /*margin-right: 5px;*/
+    padding: 1rem;
+    height: 66px;
 }
 #li-div{
     padding-top: 15px;
     background-color: orangered;
 }
 .done{
-    float: left;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    font-size: 2.0em; 
+    border: none;
+    font-size: 1rem; 
     color: rgb(49, 44, 44);
-    background-color: #1cc206;
+    background-color: rgb(11, 212, 162);
+    padding: 1rem;
+    height: 66px;
 }
 .edit{
-    float: left;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    font-size: 2.0em; 
+    border: none;
+    font-size: 1.5rem; 
     color: white;
-    background-color: #a32cc4;
+    background-color: #254e97;
+    padding: 1rem;
+    height: 66px;
 }
 .dropdown_select{
     font-size: inherit; /* inherit size from .custom-dropdown */
-    padding: .5em; /* add some space*/
+    padding: 1rem; /* add some space*/
     margin: 0; /* remove default margins */
 }
 .dropdown_white {
     background-color: #fff;
     color: #444;
-    border-color: #ff007f;
+    border-color: #254e97;
 }
 /*.custom-dropdown--large {
     font-size: 1.5em;
 }*/
 .custom-dropdown--small {
     font-size: .7em;
+}
+.select{
+    margin: 1rem;
+    overflow: hidden;
 }
 @supports (pointer-events: none) and (appearance: none) {
     .custom-dropdown {
@@ -182,6 +213,8 @@ button:hover{
         border: 0;
         border-radius: 3px;
         appearance: none;
+        font-family: 'Rubik',sans-serif;
+        font-size: 1.2rem;
       }
     .custom-dropdown::before,
     .custom-dropdown::after {
@@ -192,11 +225,13 @@ button:hover{
     .custom-dropdown::after { /*  Custom dropdown arrow */
         content: "\25BC";
         height: 1em;
-        font-size: .625em;
+        font-size: 1em;
         line-height: 1;
         right: 1.2em;
         top: 50%; 
         margin-top: -.5em;
+        color: #fff;
+        margin-right: -.7em;
     }
     .custom-dropdown::before { /*  Custom dropdown arrow cover */
         width: 2em;
@@ -204,7 +239,8 @@ button:hover{
         top: 0; 
         bottom: 0;
         border-radius: 0 3px 3px 0;
-        background-color: #ff007f;
+        background-color: #254e97;
+        color: #fff;
     }
     .dropdown_select[disabled] {
         color: rgba(0,0,0,.3);
@@ -223,14 +259,19 @@ button:hover{
 }
 #clear{
     font-size: 1.2em;
-    color: #000000;
-    background-color: #fff;
+    color: #fff;
+    background-color: #254e97;
     outline: 0;
     width: auto;
     height: 50px;
     border-radius: 10px;
-    border-color: #ff007f;  
+    border-color: #000;  
     margin: 0px 0px 20px 0px;
+    font-family: 'Rubik',sans-serif;
+    padding: 10px;
+}
+#clear:hover{
+    background-color: slateblue;
 }
 @media (max-width: 500px) {
     .main{
@@ -256,9 +297,165 @@ button:hover{
      border-color: black;
  }*/
  .inner-div{
-      margin: 0px 0px 0px 40px;
+      margin: 0.5rem;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.5rem;
+      align-items: center;
  }
  .completed{
     text-decoration: line-through;
     color: #f00;
  }
+ .todo-item {
+    padding: 0rem 0.5rem;
+  }
+  #snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    font-family: 'Rubik',sans-serif;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  /*#confirm {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    position: fixed;
+    width: 250px;
+    left: 50%;
+    margin-left: -100px;
+    padding: 6px 8px 8px;
+    box-sizing: border-box;
+    text-align: center;
+ }
+ #confirm button {
+    background-color: #254e97;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 5px;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+    color: white;
+ }
+ #confirm .message {
+    text-align: left;
+ }*/
+ #container { 
+    display: none; 
+    /*background-image: linear-gradient(to right, #66a80f, #c0eb75); */
+    background-color: #fff;
+    background-size:cover; 
+    color: black; 
+    position: absolute; 
+    width: 350px; 
+    border-radius: 5px; 
+    left: 50%; 
+    margin-left: -160px; 
+    padding: 16px 8px 8px; 
+    box-sizing: border-box; 
+    bottom: 30%;
+    border-color: black;
+    border: solid;
+} 
+  
+/* Designing dialog box's okay buttun */
+#container .yes { 
+    background-color: #254e97; 
+    display: inline-block; 
+    border-radius: 5px; 
+    border: 2px solid gray; 
+    padding: 5px; 
+    margin-right: 10px; 
+    text-align: center; 
+    width: 60px; 
+    float: right; 
+    color: white;
+    font-family: 'Rubik',sans-serif;
+} 
+  
+#container .no { 
+    background-color: rgb(233, 64, 64); 
+    display: inline-block; 
+    border-radius: 5px; 
+    border: 2px solid gray; 
+    padding: 5px; 
+    margin-right: 10px; 
+    text-align: center; 
+    width: 95px; 
+    float: right; 
+    font-family: 'Rubik',sans-serif;
+} 
+  
+#container .yes:hover { 
+    background-color: #82c91e; 
+
+} 
+  
+#container .no:hover { 
+    background-color: #99e9f2; 
+
+} 
+  
+/* Dialog box message decorating */
+#container .message { 
+    text-align: left; 
+    padding: 10px 30px; 
+} 
+ul:empty::before {
+    content: "Please enter a todo item";
+    font-size: x-large;
+    font-family: 'Rubik',sans-serif;
+    color: rgb(128, 129, 119);
+}
+.div3{
+    font-size: x-large;
+    text-align: center;
+    font-family: 'Rubik',sans-serif;
+}
+.fa-clipboard-check{
+    font-size: 10px;
+    text-align: center;
+}
+#demo{
+    margin-bottom: 30px;
+    color: rgb(128, 129, 119);
+}
